@@ -13,13 +13,13 @@ and [Meteor.subscribe](https://docs.meteor.com/api/pubsub.html#Meteor-subscribe)
 **Kind**: global class  
 
 * [MeteorObservable](#MeteorObservable)
-    * [.call(name, ...args)](#MeteorObservable.call) ⇒ <code>Observable.&lt;T&gt;</code>
+    * [.call(name, ...args)](#MeteorObservable.call) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;T&gt;</code>
     * [.subscribe(name, ...args)](#MeteorObservable.subscribe) ⇒ <code>Observable</code>
-    * [.autorun()](#MeteorObservable.autorun) ⇒ <code>Observable.&lt;T&gt;</code>
+    * [.autorun()](#MeteorObservable.autorun) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;T&gt;</code>
 
 <a name="MeteorObservable.call"></a>
 
-### MeteorObservable.call(name, ...args) ⇒ <code>Observable.&lt;T&gt;</code>
+### MeteorObservable.call(name, ...args) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;T&gt;</code>
 Invokes a [Meteor Method](https://docs.meteor.com/api/methods.html)
 defined on the server, passing any number of arguments. This method has
 the same signature as
@@ -28,7 +28,7 @@ without the callbacks:
    MeteorObservable.call(name, [...args])
 
 **Kind**: static method of [<code>MeteorObservable</code>](#MeteorObservable)  
-**Returns**: <code>Observable.&lt;T&gt;</code> - - RxJS Observable, which completes when the
+**Returns**: <code>[ &#x27;Observable&#x27; ].&lt;T&gt;</code> - - RxJS Observable, which completes when the
  server returns a response.  
 
 | Param | Type | Description |
@@ -120,7 +120,7 @@ except without the callbacks again:
 ```
 <a name="MeteorObservable.autorun"></a>
 
-### MeteorObservable.autorun() ⇒ <code>Observable.&lt;T&gt;</code>
+### MeteorObservable.autorun() ⇒ <code>[ &#x27;Observable&#x27; ].&lt;T&gt;</code>
 Allows you to run a function every time there is a change is a reactive
 data sources. This method has the same signature as
 [Meteor.autorun](https://docs.meteor.com/api/tracker.html#Tracker-autorun),
@@ -128,7 +128,7 @@ only without the callback:
    MeteorObservable.autorun()
 
 **Kind**: static method of [<code>MeteorObservable</code>](#MeteorObservable)  
-**Returns**: <code>Observable.&lt;T&gt;</code> - - RxJS Observable, which trigger the subscription callback
+**Returns**: <code>[ &#x27;Observable&#x27; ].&lt;T&gt;</code> - - RxJS Observable, which trigger the subscription callback
  each time that Meteor Tracker detects a change.  
 **Example** *(Example using Angular2 Component)*  
 ```js

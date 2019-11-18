@@ -10,6 +10,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 import { Observable, Subject } from 'rxjs';
 import { gZone, forkZone, removeObserver } from './utils';
+import * as _ from 'lodash';
 var ObservableCursor = /** @class */ (function (_super) {
     __extends(ObservableCursor, _super);
     /**
@@ -25,11 +26,11 @@ var ObservableCursor = /** @class */ (function (_super) {
             }
             Meteor.setTimeout(function () {
                 if (_this._isDataInitinialized) {
-                    observer.next(_this._data);
+                    observer.next(_.clone(_this._data));
                 }
                 else if (cursor.count() === 0) {
                     _this._isDataInitinialized = true;
-                    observer.next(_this._data);
+                    observer.next(_.clone(_this._data));
                 }
             }, 0);
             return function () {
@@ -134,7 +135,7 @@ var ObservableCursor = /** @class */ (function (_super) {
     ObservableCursor.prototype._runNext = function (data) {
         this._countObserver.next(this._data.length);
         this._observers.forEach(function (observer) {
-            observer.next(data);
+            observer.next(_.clone(data));
         });
     };
     ObservableCursor.prototype._addedAt = function (doc, at, before) {

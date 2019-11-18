@@ -7,11 +7,11 @@
 * [ObservableCursor](#ObservableCursor) ⇐ <code>Observable</code>
     * [new ObservableCursor(cursor)](#new_ObservableCursor_new)
     * _instance_
-        * [.cursor](#ObservableCursor+cursor) ⇒ <code>Mongo.Cursor.&lt;T&gt;</code>
+        * [.cursor](#ObservableCursor+cursor) ⇒ <code>[ &#x27;Mongo.Cursor&#x27; ].&lt;T&gt;</code>
         * [.collectionCount()](#ObservableCursor+collectionCount) ⇒ <code>Observable</code>
         * [.stop()](#ObservableCursor+stop)
         * [.dispose()](#ObservableCursor+dispose)
-        * [.fetch()](#ObservableCursor+fetch) ⇒ <code>Array.&lt;T&gt;</code>
+        * [.fetch()](#ObservableCursor+fetch) ⇒ <code>[ &#x27;Array&#x27; ].&lt;T&gt;</code>
         * [.observe(callbacks)](#ObservableCursor+observe) ⇒ <code>Meteor.LiveQueryHandle</code>
         * [.observeChanges(callbacks)](#ObservableCursor+observeChanges) ⇒ <code>Meteor.LiveQueryHandle</code>
     * _static_
@@ -23,15 +23,15 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| cursor | <code>Mongo.Cursor.&lt;T&gt;</code> | The Mongo.Cursor to wrap. |
+| cursor | <code>[ &#x27;Mongo.Cursor&#x27; ].&lt;T&gt;</code> | The Mongo.Cursor to wrap. |
 
 <a name="ObservableCursor+cursor"></a>
 
-### observableCursor.cursor ⇒ <code>Mongo.Cursor.&lt;T&gt;</code>
+### observableCursor.cursor ⇒ <code>[ &#x27;Mongo.Cursor&#x27; ].&lt;T&gt;</code>
 Returns the actual Mongo.Cursor that wrapped by current ObservableCursor instance.
 
 **Kind**: instance property of [<code>ObservableCursor</code>](#ObservableCursor)  
-**Returns**: <code>Mongo.Cursor.&lt;T&gt;</code> - The actual MongoDB Cursor.  
+**Returns**: <code>[ &#x27;Mongo.Cursor&#x27; ].&lt;T&gt;</code> - The actual MongoDB Cursor.  
 <a name="ObservableCursor+collectionCount"></a>
 
 ### observableCursor.collectionCount() ⇒ <code>Observable</code>
@@ -57,11 +57,11 @@ Use this method only when the Observable is still cold, and there are no active 
 **Kind**: instance method of [<code>ObservableCursor</code>](#ObservableCursor)  
 <a name="ObservableCursor+fetch"></a>
 
-### observableCursor.fetch() ⇒ <code>Array.&lt;T&gt;</code>
+### observableCursor.fetch() ⇒ <code>[ &#x27;Array&#x27; ].&lt;T&gt;</code>
 Return all matching documents as an Array.
 
 **Kind**: instance method of [<code>ObservableCursor</code>](#ObservableCursor)  
-**Returns**: <code>Array.&lt;T&gt;</code> - The array with the matching documents.  
+**Returns**: <code>[ &#x27;Array&#x27; ].&lt;T&gt;</code> - The array with the matching documents.  
 <a name="ObservableCursor+observe"></a>
 
 ### observableCursor.observe(callbacks) ⇒ <code>Meteor.LiveQueryHandle</code>
@@ -99,5 +99,5 @@ Static method which creates an ObservableCursor from Mongo.Cursor.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| cursor | <code>Mongo.Cursor.&lt;T&gt;</code> | The Mongo.Cursor to wrap. |
+| cursor | <code>[ &#x27;Mongo.Cursor&#x27; ].&lt;T&gt;</code> | The Mongo.Cursor to wrap. |
 

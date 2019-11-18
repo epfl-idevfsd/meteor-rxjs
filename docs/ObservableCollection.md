@@ -13,16 +13,16 @@ T is a generic type - should be used with the type of the objects inside the col
 * [Collection](#Collection)
     * [new Collection(nameOrExisting, options)](#new_Collection_new)
     * _instance_
-        * [.collection](#Collection+collection) ⇒ <code>Mongo.Collection.&lt;T&gt;</code>
+        * [.collection](#Collection+collection) ⇒ <code>[ &#x27;Mongo.Collection&#x27; ].&lt;T&gt;</code>
         * [.allow()](#Collection+allow) ⇒ <code>Boolean</code>
         * [.deny()](#Collection+deny) ⇒ <code>Boolean</code>
         * [.rawCollection()](#Collection+rawCollection) ⇒ <code>Mongo.Collection</code>
         * [.rawDatabase()](#Collection+rawDatabase) ⇒ <code>Mongo.Db</code>
-        * [.insert(doc)](#Collection+insert) ⇒ <code>Observable.&lt;string&gt;</code>
-        * [.remove(selector)](#Collection+remove) ⇒ <code>Observable.&lt;Number&gt;</code>
-        * [.update(selector, modifier, options)](#Collection+update) ⇒ <code>Observable.&lt;Number&gt;</code>
-        * [.upsert(selector, modifier, options)](#Collection+upsert) ⇒ <code>Observable.&lt;{numberAffected, insertedId}&gt;</code>
-        * [.find(selector, options)](#Collection+find) ⇒ <code>ObservableCursor.&lt;T&gt;</code>
+        * [.insert(doc)](#Collection+insert) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;string&gt;</code>
+        * [.remove(selector)](#Collection+remove) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;Number&gt;</code>
+        * [.update(selector, modifier, options)](#Collection+update) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;Number&gt;</code>
+        * [.upsert(selector, modifier, options)](#Collection+upsert) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;{numberAffected, insertedId}&gt;</code>
+        * [.find(selector, options)](#Collection+find) ⇒ <code>[ &#x27;ObservableCursor&#x27; ].&lt;T&gt;</code>
         * [.findOne(selector, options)](#Collection+findOne) ⇒ <code>any</code>
     * _inner_
         * [~MongoQueryOptions](#Collection..MongoQueryOptions) : <code>Object</code>
@@ -43,11 +43,11 @@ Creates a new Mongo.Collection instance wrapped with Observable features.
 
 <a name="Collection+collection"></a>
 
-### collection.collection ⇒ <code>Mongo.Collection.&lt;T&gt;</code>
+### collection.collection ⇒ <code>[ &#x27;Mongo.Collection&#x27; ].&lt;T&gt;</code>
 Returns the Mongo.Collection object that wrapped with the MongoObservable.Collection.
 
 **Kind**: instance property of [<code>Collection</code>](#Collection)  
-**Returns**: <code>Mongo.Collection.&lt;T&gt;</code> - The Collection instance  
+**Returns**: <code>[ &#x27;Mongo.Collection&#x27; ].&lt;T&gt;</code> - The Collection instance  
 <a name="Collection+allow"></a>
 
 ### collection.allow() ⇒ <code>Boolean</code>
@@ -80,11 +80,11 @@ Returns the Db object corresponding to this collection's database connection fro
 **See**: [rawDatabase on Meteor documentation](https://docs.meteor.com/api/collections.html#Mongo-Collection-rawDatabase)  
 <a name="Collection+insert"></a>
 
-### collection.insert(doc) ⇒ <code>Observable.&lt;string&gt;</code>
+### collection.insert(doc) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;string&gt;</code>
 Insert a document in the collection.
 
 **Kind**: instance method of [<code>Collection</code>](#Collection)  
-**Returns**: <code>Observable.&lt;string&gt;</code> - Observable which completes with the inserted ObjectId  
+**Returns**: <code>[ &#x27;Observable&#x27; ].&lt;string&gt;</code> - Observable which completes with the inserted ObjectId  
 **See**: [insert on Meteor documentation](https://docs.meteor.com/api/collections.html#Mongo-Collection-insert)  
 
 | Param | Type | Description |
@@ -93,11 +93,11 @@ Insert a document in the collection.
 
 <a name="Collection+remove"></a>
 
-### collection.remove(selector) ⇒ <code>Observable.&lt;Number&gt;</code>
+### collection.remove(selector) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;Number&gt;</code>
 Remove documents from the collection.
 
 **Kind**: instance method of [<code>Collection</code>](#Collection)  
-**Returns**: <code>Observable.&lt;Number&gt;</code> - Observable which completes with the number of affected rows  
+**Returns**: <code>[ &#x27;Observable&#x27; ].&lt;Number&gt;</code> - Observable which completes with the number of affected rows  
 **See**: [remove on Meteor documentation](https://docs.meteor.com/api/collections.html#Mongo-Collection-remove)  
 
 | Param | Type | Description |
@@ -106,11 +106,11 @@ Remove documents from the collection.
 
 <a name="Collection+update"></a>
 
-### collection.update(selector, modifier, options) ⇒ <code>Observable.&lt;Number&gt;</code>
+### collection.update(selector, modifier, options) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;Number&gt;</code>
 Modify one or more documents in the collection.
 
 **Kind**: instance method of [<code>Collection</code>](#Collection)  
-**Returns**: <code>Observable.&lt;Number&gt;</code> - Observable which completes with the number of affected rows  
+**Returns**: <code>[ &#x27;Observable&#x27; ].&lt;Number&gt;</code> - Observable which completes with the number of affected rows  
 **See**: [update on Meteor documentation](https://docs.meteor.com/api/collections.html#Mongo-Collection-update)  
 
 | Param | Type | Description |
@@ -121,11 +121,11 @@ Modify one or more documents in the collection.
 
 <a name="Collection+upsert"></a>
 
-### collection.upsert(selector, modifier, options) ⇒ <code>Observable.&lt;{numberAffected, insertedId}&gt;</code>
+### collection.upsert(selector, modifier, options) ⇒ <code>[ &#x27;Observable&#x27; ].&lt;{numberAffected, insertedId}&gt;</code>
 Finds the first document that matches the selector, as ordered by sort and skip options.
 
 **Kind**: instance method of [<code>Collection</code>](#Collection)  
-**Returns**: <code>Observable.&lt;{numberAffected, insertedId}&gt;</code> - Observable which completes with an
+**Returns**: <code>[ &#x27;Observable&#x27; ].&lt;{numberAffected, insertedId}&gt;</code> - Observable which completes with an
  Object that contain the keys numberAffected and insertedId.  
 **See**: [upsert on Meteor documentation](https://docs.meteor.com/api/collections.html#Mongo-Collection-upsert)  
 
@@ -137,11 +137,11 @@ Finds the first document that matches the selector, as ordered by sort and skip 
 
 <a name="Collection+find"></a>
 
-### collection.find(selector, options) ⇒ <code>ObservableCursor.&lt;T&gt;</code>
+### collection.find(selector, options) ⇒ <code>[ &#x27;ObservableCursor&#x27; ].&lt;T&gt;</code>
 Method has the same notation as Mongo.Collection.find, only returns Observable.
 
 **Kind**: instance method of [<code>Collection</code>](#Collection)  
-**Returns**: <code>ObservableCursor.&lt;T&gt;</code> - RxJS Observable wrapped with Meteor features.  
+**Returns**: <code>[ &#x27;ObservableCursor&#x27; ].&lt;T&gt;</code> - RxJS Observable wrapped with Meteor features.  
 **See**: [find on Meteor documentation](https://docs.meteor.com/api/collections.html#Mongo-Collection-find)  
 
 | Param | Type | Description |
